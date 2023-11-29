@@ -43,13 +43,17 @@
       
      </div> -->
      <button (click)="onClick()">Button</button>
+     <button name="btnAddStation" (click)="onAddClick()" [disabled] = "!isAddButtonEnabled">Add</button>
+     <!-- <button name="btnDeleteStation" (click)="onDeleteClick()" [disabled]="!isDeleteButtonEnabled">Delete</button>  -->
+     <button name="btnCancelAddStation" (click)="onCancelClick()" [disabled] = "!isCancelButtonEnabled">Cancel</button>
+     <!-- <button [disabled]="!isChecked">Delete</button> -->
+     <button (click)="deleteCheckedRows()" [disabled]="!isChecked">Delete</button>
+     
 
  </div>
 
-
-  
-  
-<table class="grid-container">
+ 
+ <table class="grid-container">
 <!-- Header row -->
   <thead class="grid-header">
     <tr>
@@ -64,7 +68,9 @@
   <tbody>
     <tr *ngFor="let location of locations$ | async"> 
        <td class="grid-item">
-        <input type="checkbox" [(ngModel)]="location.selected">
+        <!-- <input type="checkbox" [(ngModel)]="location.selected"> -->
+        <input type="checkbox" [(ngModel)]="isChecked" #myCheckbox (change)="enableButton(myCheckbox.checked)">
+       
       </td>
       <td class="grid-item">{{ location.nlcCode }}</td>
       <td class="grid-item">{{ location.crsCode }}</td>
