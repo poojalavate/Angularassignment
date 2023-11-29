@@ -1,0 +1,19 @@
+"users":[
+    {
+      "nlcCode": "ABC123",
+      "crsCode": "XYZ456",
+      "description": "Description 1"
+    },
+    {
+      "nlcCode": "DEF789",
+      "crsCode": "LMN012",
+      "description": "Description 2"
+    },
+    {
+      "nlcCode": "GHI345",
+      "crsCode": "OPQ678",
+      "description": "Description 3"
+    }
+    
+  ]
+  

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+    
+<div class="google-buttons">
+    <button class="prev-button" (click)="goBack()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+     <!--Previous--> 
+    </button>
+  
+    <button class="next-button" (click)="goForward()">
+      <!--Next-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+      </svg>
+    </button>
+<div>
+    <!-- Reload button -->
+<button class="reload-button" (click)="reloadPage()">
+    <i class="fas fa-sync-alt"></i> <!-- Font Awesome reload icon -->
+    <!-- Reload -->
+  </button>
+  
+ 
+    
+  
+  
+</div>
+    <!-- <div class="google-search">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="https://www.corp.worldline.com/">
+      
+     </div> -->
+     <button (click)="onClick()">Button</button>
+
+ </div>
+
+
+  
+  
+<table class="grid-container">
+<!-- Header row -->
+  <thead class="grid-header">
+    <tr>
+      <th class="header-checkbox">Selection</th>
+      <th class="header-column">NLC Code</th>
+      <th class="header-column">CRS Code</th>
+      <th class="header-column">Description</th>
+    </tr>
+  </thead>
+
+  <!-- Data rows -->
+  <tbody>
+    <tr *ngFor="let location of locations$ | async"> 
+       <td class="grid-item">
+        <input type="checkbox" [(ngModel)]="location.selected">
+      </td>
+      <td class="grid-item">{{ location.nlcCode }}</td>
+      <td class="grid-item">{{ location.crsCode }}</td>
+      <td class="grid-item">{{ location.description }}</td>
+    </tr>
+  </tbody>
+</table> 
+
+
+
+
+</body>
+</html>

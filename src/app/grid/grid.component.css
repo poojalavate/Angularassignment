@@ -1,0 +1,133 @@
+/* grid.component.css */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+/* Your additional styles for Font Awesome icons or elements */
+
+
+/* Grid styles */
+.grid-container {
+    width: 100%;
+    border-collapse: collapse;
+    height: 300px; /* Set a fixed height for the table container */
+    overflow-y: auto; /* Enable vertical scrollbar */
+  }
+  
+  .grid-header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  .grid-item {
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .header-checkbox {
+    width: 100px; /* Adjust width for checkbox column */
+  }
+  
+  .header-column {
+    /* Add styles for other header columns if needed */
+  }
+
+  /* Your existing grid styles remain unchanged */
+
+/* Search bar styles */
+.search-bar {
+    margin-bottom: 10px;
+    
+  }
+  
+  .google-buttons {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 10px; /* Adjust width as needed */
+    margin: 10px auto; /* Center the buttons */
+    border:none;
+  }
+  
+  .prev-button,
+  .next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f8f9fa;
+    color: #050506;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev-button svg,
+  .next-button svg {
+    width: 10px;
+    height: 20px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: #e8eaed;
+  }
+
+  /* Style for the search bar container */
+/* Style for the search container */
+/* .search-container {
+    float: left; /* Align the container to the left */
+    /*margin-left: 20px; /* Add margin from the left side */
+    
+  /*} */
+  
+  /* Style for the search bar */
+  .google-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    padding: 1px;
+    background-color: #fff;
+    margin-left: 0px;
+   
+   
+   display: block;
+    
+    
+  }
+  
+  /* Style for the search input */
+  .google-search input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 950px;
+  }
+  
+ /* Style for the reload button */
+.reload-button {
+    padding: 5px 10px;
+    /* border: 1px solid #ccc; */
+    border: none;
+    border-radius: 60px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the Font Awesome icons */
+  @import '~@fortawesome/fontawesome-free/css/all.css'; /* Import Font Awesome CSS */
+  
+  /* Styling the Font Awesome icon inside the button */
+  .reload-button i {
+    margin-right: 5px; /* Adjust icon spacing */
+  }
+  
+ 
+  
+  
